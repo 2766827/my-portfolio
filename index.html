@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header, footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .gallery-container {
+            text-align: center;
+        }
+        .gallery-image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .gallery-buttons button {
+            margin: 0 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .gallery-buttons button:hover {
+            background-color: #005fa3;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать</h1>
+        <p>Это моя визитка</p>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <h2>Обо мне</h2>
+            <img src="photo/mphoto.jpg" alt="Моё фото" width="200" style="display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+            <p>моя легенда.</p>
+        </section>
+
+        <section class="section" id="portfolio">
+            <h2>Портфолио</h2>
+            <div class="gallery-container">
+                <img id="mainImage" class="gallery-image" src="gallery/work1.jpg" alt="Работа 1">
+                <div class="gallery-buttons">
+                    <button onclick="showImage('gallery/work1.jpg')">1</button>
+                    <button onclick="showImage('gallery/work2.jpg')">2</button>
+                    <button onclick="showImage('gallery/work3.jpg')">3</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contacts">
+            <h2>Контакты</h2>
+            <p>Email: 2766827@gmail.com</p>
+            <p>Telegram: @pro_it</p>
+            <div class="social-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 мой стиль</p>
+    </footer>
+
+    <script>
+        function showImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+</body>
+</html>
